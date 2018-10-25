@@ -16,7 +16,9 @@ const nk_rune nk_font_japanese_glyph_ranges[] = {
 };
 */
 import "C"
-import "unsafe"
+import (
+	"unsafe"
+)
 
 func (ctx *Context) Input() *Input {
 	return (*Input)(&ctx.input)
@@ -301,7 +303,7 @@ func (s *Style) Text() *StyleText {
 }
 
 func (s *Style) Window() *StyleWindow {
-    return (*StyleWindow)(&s.window)
+	return (*StyleWindow)(&s.window)
 }
 
 func (w *StyleWindow) Background() *Color {
